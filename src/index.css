@@ -12,6 +12,53 @@ body {
   background-color: #f3f3f3;
 }
 
+.container__form {
+  display: flex;
+  gap: 12px;
+}
+
+.container__form-btn {
+  border: none;
+  outline: none;
+  padding: 12px 8px;
+  cursor: pointer;
+  color: #f3f3f3;
+  font-size: 16px;
+  background-color: rgba(50, 50, 219, 0.891);
+  border-radius: 8px;
+}
+
+.container__form-input {
+  padding: 12px 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+.container {
+  padding: 24px;
+}
+
+.container__grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.container__grid a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.document__card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
 .editor .ql-editor {
   width: 8.5in;
   min-height: 11in;

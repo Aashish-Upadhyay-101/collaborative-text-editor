@@ -1,9 +1,20 @@
-// later on we will use react-router here...
-
+import { Route, Routes } from "react-router";
 import CollaborativeTextEditor from "./CollaborativeTextEditor";
+import Documents from "./Documents";
 
 function App() {
-  return <CollaborativeTextEditor />;
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={<Documents />}
+      />
+      <Route
+        path="document/:id"
+        element={<CollaborativeTextEditor />}
+      />
+    </Routes>
+  );
 }
 
 export default App;
