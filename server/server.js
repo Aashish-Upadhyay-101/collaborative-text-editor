@@ -20,7 +20,7 @@ const socketPort = 8001;
 // database connection
 mongoose
   .connect(
-    "mongodb+srv://aashish:aashish@cluster0.rmrp5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    process.env.DATABASE_URL
   )
   .then((res) => {
     console.log("Database connection successful");
