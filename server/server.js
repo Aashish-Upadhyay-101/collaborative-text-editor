@@ -82,6 +82,17 @@ io.on("connection", (socket) => {
     socket.on("save-document", async (data) => {
       await getDocumentAndSave(data);
     });
+
+    socket.on("cursor-update", (data) => {
+      socket.broadcast.to(id).emit("cursor-update", data);
+    });
+
+    socket.on("disconnect", () => {
+      const rooms = Array.from(socket.rooms);
+      rooms.forEach((room) => {
+        socket.broadcast.to(room).emit("user-disconnected", socket.id);
+      });
+    });
   });
 });
 
